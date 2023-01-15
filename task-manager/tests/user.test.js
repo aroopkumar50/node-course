@@ -27,7 +27,7 @@ test("Should signup a new user", async () => {
     const response = await request(app)
         .post("/users")
         .send({
-            name: "Aroop",
+            name: "Aroop Kumar",
             email: "aroop@gmail.com",
             password: "AK1999SD!",
         })
@@ -40,7 +40,7 @@ test("Should signup a new user", async () => {
     //Assertions about the response
     expect(response.body).toMatchObject({
         user: {
-            name: "Aroop",
+            name: "Aroop Kumar",
             email: "aroop@gmail.com",
         },
         token: user.tokens[0].token,
